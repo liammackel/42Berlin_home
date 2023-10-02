@@ -6,7 +6,7 @@
 /*   By: liammackel <liammackel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 19:56:04 by liammackel        #+#    #+#             */
-/*   Updated: 2023/10/02 20:05:56 by liammackel       ###   ########.fr       */
+/*   Updated: 2023/10/02 20:27:39 by liammackel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,16 @@
 
 void    ft_div_mod(int a, int b, int *div, int *mod)
 {   
-    div = a / b;
-    mod = a % b;
+    if (b != 0)
+    {
+        div = a / b;
+        mod = a % b;
+    }
+    else
+    {
+        *div = 0;
+        *mod = 0;
+    }
 }
 
 int main(void)
